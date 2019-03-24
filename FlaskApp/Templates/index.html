@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+ 
+<head>
+    <title>Dobot Magician</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+ 
+ 
+</head>
+ 
+<body>
+ 
+    <div class="container">
+        <div class="header">
+            <nav>
+                <ul class="nav nav-pills pull-right">
+                    <li role="presentation" ><a href="#">Grabar</a>
+                    </li>
+                    <li role="presentation"><a href="#">Validar</a>
+                    </li>
+                    <li role="presentation"><a href="#">Cerrar Sesión</a>
+                    </li>
+                </ul>
+            </nav>
+            <br>
+            <br>
+            <h3 class="text-muted">Dobot Magician</h3>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="row marketing">
+            <div class="col-lg-4">
+                <h2>Ingrese la imagen:</h2>
+                <br>
+                <div class="input-group image-preview">
+                          <input type="text" class="form-control image-preview-filename" disabled="disabled"> <!-- don't give a name === doesn't send on POST/GET -->
+                          <span class="input-group-btn">
+                              <!-- image-preview-clear button -->
+                              <button type="button" class="btn btn-default image-preview-clear" style="display:none;">
+                                  <span class="glyphicon glyphicon-remove"></span> Clear
+                              </button>
+                              <!-- image-preview-input -->
+                              <div class="btn btn-default image-preview-input">
+                                  <span class="glyphicon glyphicon-folder-open"></span>
+                                  <span class="image-preview-input-title">Browse</span>
+                                  <input type="file" accept="image/png, image/jpeg, image/gif" name="input-file-preview"/> <!-- rename it -->
+                              </div>
+                          </span>
+                      </div><!-- /input-group image-preview [TO HERE]--> 
+            </div>
+ 
+            <div class="col-lg-4">
+                <form action="calcular" name="form1" method="post" style="color: white;">
+                    <h2 style="color:black;">Ingrese la masa del material:</h2>
+                    <input type="number" name="masa">
+                    <br>
+                    <h2 style="color:black;">Ingrese el largo:</h2>
+                    <input type="number" name="largo">
+                    <br>
+                    <h2 style="color:black;">Ingrese el ancho:</h2>
+                    <input type="number" name="ancho">
+                    <br>
+                    <h2 style="color:black;">Ingrese el espesor:</h2>
+                    <input type="number" name="espesor">
+                    <br>
+                    <br>
+                    <input  style="width:fixed; height:fixed;"  name="Continuar"   class="contratar-a correr"    type="submit"  value="Analizar" >
+                    </form>
+            </div>
+
+            <div class="col-lg-4">
+                <h4>Volumen: </h4>
+                <br>
+                <br>
+                <h4>Densidad: </h4>
+                <br>
+                <br>
+                <h4>Material: </h4>
+            </div>
+        </div>
+ 
+        <footer class="footer">
+            <p>&copy; Black Panters 2019</p>
+        </footer>
+ 
+    </div>
+</body>
+ 
+</html>
